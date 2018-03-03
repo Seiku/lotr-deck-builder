@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 import com.smith.lotrdeckbuilder.game.Card;
 import com.smith.lotrdeckbuilder.game.Deck;
-import com.smith.lotrdeckbuilder.game.LotrBD;
+import com.smith.lotrdeckbuilder.game.RingsDB;
 import com.smith.lotrdeckbuilder.helper.AppManager;
 import com.smith.lotrdeckbuilder.helper.CardImagesDownloader;
 import com.smith.lotrdeckbuilder.helper.StringDownloader;
@@ -180,7 +180,7 @@ public class SettingsActivity extends PreferenceActivity
         } else if (key.equals(KEY_PREF_AMOUNT_OF_CORE_DECKS)) {
             refreshPrefsSummaries();
         } else if (key.equals(KEY_PREF_LANGUAGE)) {
-            StringDownloader sd = new StringDownloader(this, String.format(LotrBD.getAllCardsUrl()), AppManager.FILE_CARDS_JSON, new StringDownloader.FileDownloaderListener() {
+            StringDownloader sd = new StringDownloader(this, String.format(RingsDB.getAllCardsUrl()), AppManager.FILE_CARDS_JSON, new StringDownloader.FileDownloaderListener() {
                 ProgressDialog mDialog;
 
                 @Override

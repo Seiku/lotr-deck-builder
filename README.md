@@ -9,4 +9,7 @@
 App store link coming soonish
 
 # THANKS #
-Adapted for the LOTR LCG from [sebast331](https://github.com/sebast331)'s [Deck Builder for Lotr](https://bitbucket.org/sebast331/android-lotr-deck-builder/). Card data taken from [ringsdb](http://ringsdb.com/).
+Original code for [Deck Builder for Netrunner](https://bitbucket.org/sebast331/android-netrunner-deck-builder/) by [sebast331](https://github.com/sebast331).
+Adapted for The Lord of the Rings: The Card Game by danrs.
+Card data taken from [ringsdb](http://ringsdb.com/).
+All content of The Lord of the Rings: The Card Game is copyright of Fantasy Flight Games.

@@ -3,13 +3,13 @@ package com.smith.lotrdeckbuilder.game;
 import com.smith.lotrdeckbuilder.SettingsActivity;
 import com.smith.lotrdeckbuilder.helper.AppManager;
 
-public class LotrBD {
+public class RingsDB {
 
-    public static final String BASE_URL = "https://lotrdb.com";
+    public static final String BASE_URL = "https://ringsdb.com";
     public static final String URL_API_SEARCH = "/api/search/";
-    private static final String URL_GET_ALL_CARDS = "https://lotrdb.com/api/2.0/public/cards?_locale=%s";
-    private static final String URL_GET_ALL_PACKS = "https://lotrdb.com/api/2.0/public/packs";
-    private static final String URL_GET_MWL = "https://lotrdb.com/api/2.0/public/mwl";
+    private static final String URL_GET_ALL_CARDS = "https://ringsdb.com/api/public/cards?_locale=%s";
+    private static final String URL_GET_ALL_PACKS = "https://ringsdb.com/api/public/packs";
+    private static final String URL_GET_MWL = "https://ringsdb.com/api/public/mwl";
 
     public static String getAllCardsUrl() {
         return String.format(URL_GET_ALL_CARDS, AppManager.getInstance().getSharedPrefs().getString(SettingsActivity.KEY_PREF_LANGUAGE, "en"));

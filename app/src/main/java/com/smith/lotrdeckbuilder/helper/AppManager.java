@@ -1,25 +1,18 @@
 package com.smith.lotrdeckbuilder.helper;
 
-import android.app.AlertDialog;
 import android.app.Application;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.text.format.DateFormat;
-import android.text.format.DateUtils;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.smith.lotrdeckbuilder.R;
 import com.smith.lotrdeckbuilder.SettingsActivity;
 import com.smith.lotrdeckbuilder.db.DatabaseHelper;
-import com.smith.lotrdeckbuilder.fragments.DeckStatsFragment;
 import com.smith.lotrdeckbuilder.game.Card;
 import com.smith.lotrdeckbuilder.game.CardList;
 import com.smith.lotrdeckbuilder.game.Deck;
-import com.smith.lotrdeckbuilder.game.LotrBD;
+import com.smith.lotrdeckbuilder.game.RingsDB;
 import com.smith.lotrdeckbuilder.game.Pack;
 import com.smith.lotrdeckbuilder.prefs.ListPreferenceMultiSelect;
 
@@ -365,7 +358,7 @@ public class AppManager extends Application {
 
     public void doDownloadCards() {
         // Most Wanted List
-        StringDownloader sdMWL = new StringDownloader(this, LotrBD.getMWLUrl(), AppManager.FILE_MWL_JSON, new StringDownloader.FileDownloaderListener() {
+        StringDownloader sdMWL = new StringDownloader(this, RingsDB.getMWLUrl(), AppManager.FILE_MWL_JSON, new StringDownloader.FileDownloaderListener() {
 
             @Override
             public void onBeforeTask() {
@@ -376,7 +369,7 @@ public class AppManager extends Application {
             public void onTaskComplete(String s) {
 
                 // Cards List
-                StringDownloader sdCards = new StringDownloader(AppManager.this, LotrBD.getAllCardsUrl(), AppManager.FILE_CARDS_JSON, new StringDownloader.FileDownloaderListener() {
+                StringDownloader sdCards = new StringDownloader(AppManager.this, RingsDB.getAllCardsUrl(), AppManager.FILE_CARDS_JSON, new StringDownloader.FileDownloaderListener() {
                     @Override
                     public void onBeforeTask() {
 
@@ -407,7 +400,7 @@ public class AppManager extends Application {
         });
         sdMWL.execute();
 
-        StringDownloader sdPacks = new StringDownloader(this, LotrBD.getAllPacksUrl(), AppManager.FILE_PACKS_JSON, new StringDownloader.FileDownloaderListener() {
+        StringDownloader sdPacks = new StringDownloader(this, RingsDB.getAllPacksUrl(), AppManager.FILE_PACKS_JSON, new StringDownloader.FileDownloaderListener() {
             @Override
             public void onBeforeTask() {
 
