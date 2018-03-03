@@ -9,4 +9,4 @@
 App store link coming soonish
 
 # THANKS #
-Adapted for the LOTR LCG from [sebast331](https://github.com/sebast331)'s [Deck Builder for Netrunner](https://bitbucket.org/sebast331/android-netrunner-deck-builder/). Card data taken from [ringsdb](http://ringsdb.com/).
+Adapted for the LOTR LCG from [sebast331](https://github.com/sebast331)'s [Deck Builder for Lotr](https://bitbucket.org/sebast331/android-lotr-deck-builder/). Card data taken from [ringsdb](http://ringsdb.com/).

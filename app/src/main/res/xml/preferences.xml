@@ -17,7 +17,7 @@
             android:defaultValue="true"
             android:title="@string/display_all_data_packs" />
 
-        <com.shuneault.netrunnerdeckbuilder.prefs.SetNamesPreferenceMultiSelect
+        <com.smith.lotrdeckbuilder.prefs.SetNamesPreferenceMultiSelect
 	        android:key="pref_DataPacks"
 	        android:dependency="pref_DataPacksShowAll"
 	        android:title="@string/data_packs_to_display"

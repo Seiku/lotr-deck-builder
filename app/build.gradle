@@ -19,7 +19,7 @@ android {
     compileSdkVersion 25
 
     defaultConfig {
-        applicationId "com.shuneault.netrunnerdeckbuilder"
+        applicationId "com.smith.lotrdeckbuilder"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 69

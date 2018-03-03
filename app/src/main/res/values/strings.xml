@@ -3,13 +3,13 @@
 
     <!-- Titles -->
     <string name="title_deck_detail">Deck Detail</string>
-    <string name="title_activity_main">Deck Builder for Netrunner</string>
+    <string name="title_activity_main">Deck Builder for Lotr</string>
     <string name="title_activity_deck">DeckActivity</string>
     <string name="title_activity_deck_info_fragment">DeckInfoFragment</string>
     <string name="title_activity_choose_identity">Choose identity</string>
 
     <!-- Various strings -->
-    <string name="app_name">NetRunnerDeckBuilder</string>
+    <string name="app_name">LotrDeckBuilder</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Open</string>
@@ -125,7 +125,7 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
     <!-- About page -->
-    <string name="about_text" formatted="false">Version %s\n\nImages have been created by <a href="http://prisoner453.deviantart.com/art/Netrunner-Assets-351310060">prisoner453</a>.\n\nThe copyrightable portions of Android: Netrunner: The Card Game and its expansions are © 2012–2013 Wizards &amp; Fantasy Flight Publishing, Inc. Netrunner is licensed by Wizards of the Coast LLC. Netrunner is a TM of R. Talsorian Games, Inc. Android, all Android: Netrunner: The Card Game expansion titles, Living Card Game, LCG, LCG logo and Fantasy Flight Supply are trademarks and/or registered trademarks of Fantasy Flight Publishing, Inc. All rights reserved to their respective owners.</string>
+    <string name="about_text" formatted="false">Version %s\n\nImages have been created by <a href="http://prisoner453.deviantart.com/art/Lotr-Assets-351310060">prisoner453</a>.\n\nThe copyrightable portions of Android: Lotr: The Card Game and its expansions are © 2012–2013 Wizards &amp; Fantasy Flight Publishing, Inc. Lotr is licensed by Wizards of the Coast LLC. Lotr is a TM of R. Talsorian Games, Inc. Android, all Android: Lotr: The Card Game expansion titles, Living Card Game, LCG, LCG logo and Fantasy Flight Supply are trademarks and/or registered trademarks of Fantasy Flight Publishing, Inc. All rights reserved to their respective owners.</string>
     <string name="title_activity_import_deck_from_net_runner_db">Import Deck</string>
 
     <string-array name="arr">

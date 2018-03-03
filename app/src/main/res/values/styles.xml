@@ -51,7 +51,7 @@
     <style name="MaterialButton">
         <item name="android:layout_margin">4dp</item>
         <item name="android:background">@drawable/selector_material_button</item>
-        <item name="android:textColor">@color/netrunner_blue</item>
+        <item name="android:textColor">@color/lotr_blue</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:minWidth">64dp</item>
@@ -64,7 +64,7 @@
     </style>
 
     <style name="CardHeader">
-        <item name="android:background">@color/netrunner_blue</item>
+        <item name="android:background">@color/lotr_blue</item>
         <item name="android:textSize">6pt</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/white</item>

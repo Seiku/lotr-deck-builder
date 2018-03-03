@@ -2,19 +2,19 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
            xmlns:tools="http://schemas.android.com/tools">
 
-	<style name="Theme.Netrunner" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar</item>
 		<item name="actionBarStyle">@style/ActionBar</item>
-		<item name="android:colorPrimary">@color/netrunner_blue</item>
-		<item name="android:colorPrimaryDark">@color/netrunner_blue_dark</item>
-		<item name="android:navigationBarColor">@color/netrunner_blue</item>
-		<item name="android:colorAccent">@color/netrunner_blue_light</item>
+		<item name="android:colorPrimary">@color/lotr_blue</item>
+		<item name="android:colorPrimaryDark">@color/lotr_blue_dark</item>
+		<item name="android:navigationBarColor">@color/lotr_blue</item>
+		<item name="android:colorAccent">@color/lotr_blue_light</item>
 		<item name="android:textColorSecondary">#757575</item>
 		<item name="android:alertDialogTheme">@style/Theme.AlertDialog</item>
 
 	</style>
 
-	<style name="Theme.Netrunner_adam" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_adam" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_adam</item>
 		<item name="actionBarStyle">@style/ActionBar_adam</item>
 		<item name="android:colorPrimary">@color/dark_adam</item>
@@ -26,7 +26,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_apex" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_apex" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_apex</item>
 		<item name="actionBarStyle">@style/ActionBar_apex</item>
 		<item name="android:colorPrimary">@color/dark_apex</item>
@@ -38,7 +38,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_sunnylebeau" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_sunnylebeau" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_sunnylebeau</item>
 		<item name="actionBarStyle">@style/ActionBar_sunnylebeau</item>
 		<item name="android:colorPrimary">@color/dark_sunnylebeau</item>
@@ -50,7 +50,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_anarch" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_anarch" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_anarch</item>
 		<item name="actionBarStyle">@style/ActionBar_anarch</item>
 		<item name="android:colorPrimary">@color/dark_anarch</item>
@@ -62,7 +62,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_criminal" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_criminal" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_criminal</item>
 		<item name="actionBarStyle">@style/ActionBar_criminal</item>
 		<item name="android:colorPrimary">@color/dark_criminal</item>
@@ -74,7 +74,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_haasbioroid" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_haasbioroid" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_hb</item>
 		<item name="actionBarStyle">@style/ActionBar_hb</item>
 		<item name="android:colorPrimary">@color/dark_haasbioroid</item>
@@ -86,7 +86,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_jinteki" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_jinteki" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_jinteki</item>
 		<item name="actionBarStyle">@style/ActionBar_jinteki</item>
 		<item name="android:colorPrimary">@color/dark_jinteki</item>
@@ -98,7 +98,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_nbn" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_nbn" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_nbn</item>
 		<item name="actionBarStyle">@style/ActionBar_nbn</item>
 		<item name="android:colorPrimary">@color/dark_nbn</item>
@@ -110,7 +110,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_shaper" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_shaper" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_shaper</item>
 		<item name="actionBarStyle">@style/ActionBar_shaper</item>
 		<item name="android:colorPrimary">@color/dark_shaper</item>
@@ -122,7 +122,7 @@
 
 	</style>
 
-	<style name="Theme.Netrunner_weylandconsortium" parent="Theme.AppCompat.Light.DarkActionBar">
+	<style name="Theme.Lotr_weylandconsortium" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar_weyland</item>
 		<item name="actionBarStyle">@style/ActionBar_weyland</item>
 		<item name="android:colorPrimary">@color/dark_weylandconsortium</item>
@@ -135,9 +135,9 @@
 	</style>
 
 	<style name="Theme.AlertDialog" parent="android:Theme.Material.Light.Dialog.Alert">
-		<item name="android:colorPrimary">@color/netrunner_blue</item>
-		<item name="android:colorPrimaryDark">@color/netrunner_blue_dark</item>
-		<item name="android:colorAccent">@color/netrunner_blue_light</item>
+		<item name="android:colorPrimary">@color/lotr_blue</item>
+		<item name="android:colorPrimaryDark">@color/lotr_blue_dark</item>
+		<item name="android:colorAccent">@color/lotr_blue_light</item>
 	</style>
 
 	<style name="Theme.AlertDialog_adam" parent="android:Theme.Material.Light.Dialog.Alert">

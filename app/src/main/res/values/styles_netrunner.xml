@@ -2,7 +2,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
            xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.Netrunner" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.Lotr" parent="Theme.AppCompat.Light.DarkActionBar">
 	    <item name="android:actionBarStyle" tools:ignore="NewApi">@style/ActionBar</item>
 	    <item name="actionBarStyle">@style/ActionBar</item>
 	    <item name="android:windowContentOverlay">@null</item>
@@ -14,8 +14,8 @@
     </style>
 
 	<style name="ActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-		<item name="android:background" tools:ignore="NewApi">@color/netrunner_blue</item>
-		<item name="background">@color/netrunner_blue</item>
+		<item name="android:background" tools:ignore="NewApi">@color/lotr_blue</item>
+		<item name="background">@color/lotr_blue</item>
 	</style>
 
 	<style name="menu_labels_style">
