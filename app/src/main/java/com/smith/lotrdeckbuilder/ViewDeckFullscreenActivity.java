@@ -99,11 +99,11 @@ public class ViewDeckFullscreenActivity extends ActionBarActivity {
 	    // set theme to identity's faction colors
 	    if (mDeck != null)
 	    {
-		    setTheme(getResources().getIdentifier("Theme.Lotr_" + mDeck.getIdentity().getFactionCode().replace("-", ""), "style", this.getPackageName()));
+		    setTheme(getResources().getIdentifier("Theme.Lotr_" + mDeck.getIdentity().getSphereCode().replace("-", ""), "style", this.getPackageName()));
 	    }
 	    else if (mCardCode != null)
 	    {
-		    setTheme(getResources().getIdentifier("Theme.Lotr_" + AppManager.getInstance().getCard(mCardCode).getFactionCode().replace("-", ""), "style", this.getPackageName()));
+		    setTheme(getResources().getIdentifier("Theme.Lotr_" + AppManager.getInstance().getCard(mCardCode).getSphereCode().replace("-", ""), "style", this.getPackageName()));
 	    }
 
         setContentView(R.layout.activity_fullscreen_view);

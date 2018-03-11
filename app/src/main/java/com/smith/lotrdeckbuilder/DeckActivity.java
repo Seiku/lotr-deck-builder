@@ -75,7 +75,7 @@ public class DeckActivity extends ActionBarActivity implements OnDeckChangedList
         mDeck = AppManager.getInstance().getDeck(getIntent().getExtras().getLong(ARGUMENT_DECK_ID));
         try
         {
-            setTheme(getResources().getIdentifier("Theme.Lotr_" + mDeck.getIdentity().getFactionCode().replace("-", ""), "style", this.getPackageName()));
+            setTheme(getResources().getIdentifier("Theme.Lotr_" + mDeck.getIdentity().getSphereCode().replace("-", ""), "style", this.getPackageName()));
         }
         catch (Exception e)
         {
@@ -124,7 +124,7 @@ public class DeckActivity extends ActionBarActivity implements OnDeckChangedList
         mActionBar.setDisplayHomeAsUpEnabled(true);
         mActionBar.setTitle(mDeck.getName());
 		// app icon doesn't work with support library - needs implemented differently
-//        if (mDeck.getIdentity().getFactionCode().equals(Card.Faction.FACTION_NEUTRAL)) {
+//        if (mDeck.getIdentity().getSphereCode().equals(Card.Faction.FACTION_NEUTRAL)) {
 //            mActionBar.setLogo(getResources().getDrawable(R.drawable.ic_launcher));
 //        } else {
 //            mActionBar.setLogo(mDeck.getIdentity().getFactionImageRes(this));
@@ -143,11 +143,11 @@ public class DeckActivity extends ActionBarActivity implements OnDeckChangedList
 	    // attach tabs to view pager
 	    tabs = (SlidingTabLayout) findViewById(R.id.tabs);
 	    tabs.setViewPager(mViewPager);
-        if (mDeck.getIdentity().getFactionCode().startsWith(Card.Faction.FACTION_NEUTRAL)) {
+        if (mDeck.getIdentity().getSphereCode().startsWith(Card.Faction.FACTION_NEUTRAL)) {
 	        tabs.setBackgroundColor(getResources().getColor(R.color.lotr_blue));
         } else {
 	        tabs.setBackgroundColor(getResources().getColor(getResources().getIdentifier(
-			        "dark_" + mDeck.getIdentity().getFactionCode().replace("-", ""), "color", this.
+			        "dark_" + mDeck.getIdentity().getSphereCode().replace("-", ""), "color", this.
 					        getPackageName())));
         }
 

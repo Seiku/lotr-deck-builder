@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.smith.lotrdeckbuilder.R;
@@ -159,7 +158,7 @@ public class ExpandableDeckCardListAdapter extends BaseExpandableListAdapter {
 
             // Influence count
             int numInfluence = 0;
-            if (!mDeck.getIdentity().getFactionCode().equals(card.getFactionCode())) {
+            if (!mDeck.getIdentity().getSphereCode().equals(card.getSphereCode())) {
                 numInfluence += card.getFactionCost();
             }
             if (card.isMostWanted() && AppManager.getInstance().getSharedPrefs().getBoolean(SettingsActivity.KEY_PREF_USE_MOST_WANTED_LIST, false)) {
@@ -208,7 +207,7 @@ public class ExpandableDeckCardListAdapter extends BaseExpandableListAdapter {
         if (mMyCards) return;
         // Colored background for the cards I own
         if (mDeck.getCardCount(card) > 0) {
-            int theColor = mContext.getResources().getIdentifier("light_" + mDeck.getIdentity().getFactionCode().replace("-", ""), "color", mContext.getPackageName());
+            int theColor = mContext.getResources().getIdentifier("light_" + mDeck.getIdentity().getSphereCode().replace("-", ""), "color", mContext.getPackageName());
             if (theColor != 0) {
                 view.setBackgroundColor(mContext.getResources().getColor(theColor));
             } else {

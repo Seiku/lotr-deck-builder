@@ -12,10 +12,10 @@ public final class Sorter {
 
         @Override
         public int compare(Card lhs, Card rhs) {
-            if (lhs.getFactionCode().equals(rhs.getFactionCode())) {
+            if (lhs.getSphereCode().equals(rhs.getSphereCode())) {
                 return lhs.getTitle().compareTo(rhs.getTitle());
             } else {
-                return lhs.getFactionCode().compareTo(rhs.getFactionCode());
+                return lhs.getSphereCode().compareTo(rhs.getSphereCode());
             }
         }
 
@@ -46,10 +46,10 @@ public final class Sorter {
             // All is OK
             if (lhs.isStarred() != rhs.isStarred()) {
                 return ((Boolean) !lhs.isStarred()).compareTo(!rhs.isStarred());
-            } else if (lhs.getIdentity().getFactionCode().equals(rhs.getIdentity().getFactionCode())) {
+            } else if (lhs.getIdentity().getSphereCode().equals(rhs.getIdentity().getSphereCode())) {
                 return lhs.getName().compareTo(rhs.getName());
             } else {
-                return lhs.getIdentity().getFactionCode().compareTo(rhs.getIdentity().getFactionCode());
+                return lhs.getIdentity().getSphereCode().compareTo(rhs.getIdentity().getSphereCode());
             }
         }
 
@@ -77,10 +77,10 @@ public final class Sorter {
 
         @Override
         public int compare(Card lhs, Card rhs) {
-            if (lhs.getFactionCode().equals(rhs.getFactionCode())) {
+            if (lhs.getSphereCode().equals(rhs.getSphereCode())) {
                 return lhs.getTitle().toLowerCase().compareTo(rhs.getTitle().toLowerCase());
             } else {
-                return lhs.getFactionCode().compareTo(rhs.getFactionCode());
+                return lhs.getSphereCode().compareTo(rhs.getSphereCode());
             }
         }
     }
@@ -103,32 +103,32 @@ public final class Sorter {
         @Override
         public int compare(Card lhs, Card rhs) {
             // Faction is my faction
-            if (lhs.getFactionCode().equals(mIdentity.getFactionCode()) && rhs.getFactionCode().equals(mIdentity.getFactionCode())) {
+            if (lhs.getSphereCode().equals(mIdentity.getSphereCode()) && rhs.getSphereCode().equals(mIdentity.getSphereCode())) {
                 return lhs.getTitle().toLowerCase().compareTo(rhs.getTitle().toLowerCase());
             } else {
-                if (lhs.getFactionCode().equals(mIdentity.getFactionCode())) {
+                if (lhs.getSphereCode().equals(mIdentity.getSphereCode())) {
                     return -1;
-                } else if (rhs.getFactionCode().equals(mIdentity.getFactionCode())) {
+                } else if (rhs.getSphereCode().equals(mIdentity.getSphereCode())) {
                     return 1;
                 } else {
 
 
                     // Faction is neutral
-                    if (lhs.getFactionCode().startsWith(Card.Faction.FACTION_NEUTRAL) && rhs.getFactionCode().startsWith(Card.Faction.FACTION_NEUTRAL)) {
+                    if (lhs.getSphereCode().startsWith(Card.Faction.FACTION_NEUTRAL) && rhs.getSphereCode().startsWith(Card.Faction.FACTION_NEUTRAL)) {
                         return lhs.getTitle().toLowerCase().compareTo(rhs.getTitle().toLowerCase());
                     } else {
-                        if (lhs.getFactionCode().startsWith(Card.Faction.FACTION_NEUTRAL)) {
+                        if (lhs.getSphereCode().startsWith(Card.Faction.FACTION_NEUTRAL)) {
                             return -1;
-                        } else if (rhs.getFactionCode().startsWith(Card.Faction.FACTION_NEUTRAL)) {
+                        } else if (rhs.getSphereCode().startsWith(Card.Faction.FACTION_NEUTRAL)) {
                             return 1;
                         } else {
 
 
                             // NOT my faction and NOT neutral
-                            if (lhs.getFactionCode().equals(rhs.getFactionCode())) {
+                            if (lhs.getSphereCode().equals(rhs.getSphereCode())) {
                                 return lhs.getTitle().toLowerCase().compareTo(rhs.getTitle().toLowerCase());
                             } else {
-                                return lhs.getFactionCode().compareTo(rhs.getFactionCode());
+                                return lhs.getSphereCode().compareTo(rhs.getSphereCode());
                             }
 
 

@@ -23,7 +23,7 @@ public class CardList extends ArrayList<Card> {
         CardList newList = new CardList();
 
         for (Card theCard : this) {
-            if ((factionCode == null || theCard.getFactionCode().equals(factionCode)) &&
+            if ((factionCode == null || theCard.getSphereCode().equals(factionCode)) &&
                     (sideCode == null || theCard.getSideCode().equals(sideCode)) &&
                     (typeCode == null || theCard.getTypeCode().equals(typeCode))) {
                 newList.add(theCard);
@@ -62,8 +62,8 @@ public class CardList extends ArrayList<Card> {
             return mFactions;
         mFactions = new ArrayList<String>();
         for (Card theCard : this) {
-            if (!mFactions.contains(theCard.getFactionCode()))
-                mFactions.add(theCard.getFactionCode());
+            if (!mFactions.contains(theCard.getSphereCode()))
+                mFactions.add(theCard.getSphereCode());
         }
         return mFactions;
     }

@@ -7,148 +7,96 @@ import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
-import android.util.Log;
 
 import com.smith.lotrdeckbuilder.R;
 import com.smith.lotrdeckbuilder.SettingsActivity;
 import com.smith.lotrdeckbuilder.helper.AppManager;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.HashMap;
 
 public class Card {
 
-//    public static final String NAME_LAST_MODIFIED = "last-modified";
-    public static final String NAME_CODE = "code";
+    public static final String NAME_CODE = "code"; // eg 01001
     public static final String NAME_COST = "cost";
     public static final String NAME_TITLE = "title";
-//    public static final String NAME_TYPE = "type";
     public static final String NAME_TYPE_CODE = "type_code";
-    public static final String NAME_SUBTYPE = "keywords";
-//    public static final String NAME_SUBTYPE_CODE = "subtype_code";
+    public static final String NAME_SUBTYPE = "traits";
     public static final String NAME_TEXT = "text";
-    public static final String NAME_BASELINK = "base_link";
-//    public static final String NAME_FACTION = "faction";
-    public static final String NAME_FACTION_CODE = "faction_code";
-    public static final String NAME_FACTION_COST = "faction_cost";
+    public static final String NAME_SPHERE_CODE = "sphere_code";
     public static final String NAME_FLAVOR = "flavor";
     public static final String NAME_ILLUSTRATOR = "illustrator";
-    public static final String NAME_INFLUENCE_LIMIT = "influence_limit";
-    public static final String NAME_MINIMUM_DECK_SIZE = "minimum_deck_size";
     public static final String NAME_NUMBER = "position";
     public static final String NAME_QUANTITY = "quantity";
-//    public static final String NAME_SET_NAME = "setname";
     public static final String NAME_SET_CODE = "pack_code";
-//    public static final String NAME_SIDE = "side";
-    public static final String NAME_SIDE_CODE = "side_code";
-    public static final String NAME_UNIQUENESS = "uniqueness";
-//    public static final String NAME_URL = "url";
+    public static final String NAME_UNIQUENESS = "is_unique";
+    public static final String NAME_DECK_LIMIT = "deck_limit";
+    public static final String NAME_THREAT = "threat";
+    public static final String NAME_WILLPOWER = "willpower";
+    public static final String NAME_ATTACK = "attack";
+    public static final String NAME_DEFENSE = "defense";
+    public static final String NAME_HEALTH = "health";
     public static final String NAME_IMAGE_URL_OVERRIDE = "image_url";
     public static final String NAME_IMAGE_SRC = "imagesrc";
-    public static final String NAME_AGENDA_POINTS = "agenda_points";
-    public static final String NAME_ADVANCEMENT_COST = "advancement_cost";
-    public static final String NAME_MEMORY_UNITS = "memory_cost";
-    public static final String NAME_TRASH = "trash_cost";
-    public static final String NAME_STRENGTH = "strength";
 
-//    private Date lastModified;
     private String code;
     private String cost;
     private String title;
-//    private String type;
     private String typeCode;
     private String subtype;
-//    private String subtype_code;
     private String text;
-    private String baselink;
-//    private String faction;
-    private String factionCode;
-    private int factionCost;
+    private String sphereCode;
     private String flavor;
     private String illustrator;
-    private String influenceLimit;
-    private String minimumDeckSize;
     private String number;
     private String quantity;
-//    private String setName;
     private String setCode;
-//    private String side;
-    private String sideCode;
-    private int agendaPoints;
-    private int advancementCost;
-    private int memoryunits;
-    private int trash;
-    private int strength;
+    private String deckLimit;
+    private int threat;
+    private int willpower;
+    private int attack;
+    private int defense;
+    private int health;
     private boolean uniqueness;
-//    private URL url;
     private URL imagesrc;
-    private int mostWantedInfluence;
 
     public Card(JSONObject json) {
-        this(json, 0);
-    }
-
-    public Card(JSONObject json, int mostWantedInfluence) {
 
         try {
-            //this.lastModified = DateFormat.getDateTimeInstance().parse(json.getString(NAME_LAST_MODIFIED));
-//            this.lastModified = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").parse(json.getString(NAME_LAST_MODIFIED));
-            //this.lastModified.setTime(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").parse(json.getString(NAME_LAST_MODIFIED)));
             this.code = json.optString(NAME_CODE);
             this.cost = json.optString(NAME_COST);
             this.title = json.optString(NAME_TITLE);
-//            this.type = json.optString(NAME_TYPE);
             this.typeCode = json.optString(NAME_TYPE_CODE);
             this.subtype = json.optString(NAME_SUBTYPE);
-//            this.subtype_code = json.optString(NAME_SUBTYPE_CODE);
             this.text = json.optString(NAME_TEXT);
-            this.baselink = json.optString(NAME_BASELINK);
-//            this.faction = json.optString(NAME_FACTION);
-            this.factionCode = json.optString(NAME_FACTION_CODE);
-            this.factionCost = json.optInt(NAME_FACTION_COST, 0);
+            this.deckLimit = json.optString(NAME_DECK_LIMIT);
+            this.sphereCode = json.optString(NAME_SPHERE_CODE);
+            this.threat = json.optInt(NAME_THREAT, 0);
             this.flavor = json.optString(NAME_FLAVOR);
             this.illustrator = json.optString(NAME_ILLUSTRATOR);
-            this.influenceLimit = json.optString(NAME_INFLUENCE_LIMIT);
-            this.minimumDeckSize = json.optString(NAME_MINIMUM_DECK_SIZE);
             this.number = json.optString(NAME_NUMBER);
             this.quantity = json.optString(NAME_QUANTITY);
-//            this.setName = json.optString(NAME_SET_NAME);
             this.setCode = json.optString(NAME_SET_CODE);
             this.uniqueness = json.optBoolean(NAME_UNIQUENESS);
-//            this.url = new URL(json.optString(NAME_URL));
             String imageUrl = json.optString(NAME_IMAGE_URL_OVERRIDE);
             if(imageUrl == null || imageUrl.length() < 1) {
                 imageUrl = json.optString(NAME_IMAGE_SRC);
             }
             this.imagesrc = new URL(imageUrl);
-//            this.side = json.optString(NAME_SIDE);
-            this.sideCode = json.optString(NAME_SIDE_CODE);
-            this.agendaPoints = json.optInt(NAME_AGENDA_POINTS, 0);
-            this.advancementCost = json.optInt(NAME_ADVANCEMENT_COST, 0);
-            this.memoryunits = json.optInt(NAME_MEMORY_UNITS, 0);
-            this.trash = json.optInt(NAME_TRASH, 0);
-            this.strength = json.optInt(NAME_STRENGTH, 0);
-            this.mostWantedInfluence = mostWantedInfluence;
+            this.willpower = json.optInt(NAME_WILLPOWER, 0);
+            this.attack = json.optInt(NAME_ATTACK, 0);
+            this.defense = json.optInt(NAME_DEFENSE, 0);
+            this.health = json.optInt(NAME_HEALTH, 0);
         } catch (MalformedURLException e) {
-            //
             e.printStackTrace();
         }
     }
 
-
-//    public Date getLastModified() {
-//        return lastModified;
-//    }
+    //TODO continue with getters and other methods
 
     public String getCode() {
         return code;
@@ -162,10 +110,6 @@ public class Card {
         return title;
     }
 
-//    public String getType() {
-//        return type;
-//    }
-
     public String getTypeCode() {
         return typeCode;
     }
@@ -174,26 +118,12 @@ public class Card {
         return subtype;
     }
 
-//    public String getSubtypeCode() { return subtype_code; }
-
     public String getText() {
         return text;
     }
 
-    public String getBaselink() {
-        return baselink;
-    }
-
-//    public String getFaction() {
-//        return faction;
-//    }
-
-    public String getFactionCode() {
-        return factionCode;
-    }
-
-    public int getFactionCost() {
-        return factionCost;
+    public String getSphereCode() {
+        return sphereCode;
     }
 
     public String getFlavor() {
@@ -237,13 +167,7 @@ public class Card {
         return AppManager.getInstance().getPackByCode(setCode).getName();
     }
 
-    public String getSetCode() {
-        return setCode;
-    }
-
-//    public String getSide() {
-//        return side;
-//    }
+    public String getSetCode() { return setCode; }
 
     public String getSideCode() {
         return sideCode;
@@ -272,11 +196,6 @@ public class Card {
     public int getStrength() {
         return strength;
     }
-
-
-//    public URL getUrl() {
-//        return url;
-//    }
 
     public URL getImagesrc() {
         return imagesrc;
@@ -372,7 +291,7 @@ public class Card {
     }
 
     public String getFactionImageResName() {
-        String lowCaseFaction = this.getFactionCode().toLowerCase();
+        String lowCaseFaction = this.getSphereCode().toLowerCase();
         if (lowCaseFaction.startsWith(Faction.FACTION_NEUTRAL)) {
             lowCaseFaction = this.getSideCode() + "_" + lowCaseFaction;
         }
@@ -382,7 +301,7 @@ public class Card {
     }
 
     public int getFactionImageRes(Context context) {
-        if (getFactionCode().startsWith(Faction.FACTION_NEUTRAL)) return R.drawable.neutral;
+        if (getSphereCode().startsWith(Faction.FACTION_NEUTRAL)) return R.drawable.neutral;
         return context.getResources().getIdentifier(getFactionImageResName(), "drawable", context.getPackageName());
     }
 
